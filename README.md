@@ -80,8 +80,8 @@ Click en Authorize 🔒
 Ingresar usuario y contraseña
 
 
-🌐 Endpoints
-📌 Usuarios
+## Endpoints
+-- Usuarios
 
 POST /api/users
 
@@ -94,7 +94,7 @@ Body:
   "cityId": 1
 }
 
-📌 Catálogos (vía Stored Procedures)
+##Catálogos (vía Stored Procedures)
 
 GET /api/catalog/countries
 
@@ -102,7 +102,8 @@ GET /api/catalog/departments/{countryId}
 
 GET /api/catalog/cities/{departmentId}
 
-🧪 Pruebas Unitarias
+
+## Pruebas Unitarias
 
 Las pruebas están en el proyecto:
 
