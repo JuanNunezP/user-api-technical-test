@@ -11,21 +11,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Descargar código
+    - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Instalar .NET
+    - name: Setup .NET 10 (preview)
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '10.0.x'
+        include-prerelease: true
 
-    - name: Restaurar paquetes
+    - name: Restore
       run: dotnet restore
 
-    - name: Compilar
-      run: dotnet build --no-restore --configuration Release
+    - name: Build
+      run: dotnet build --no-restore
 
-    - name: Ejecutar tests
+    - name: Run Tests
       run: dotnet test --no-build --verbosity normal
-
-
